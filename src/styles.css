@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary-color: #00b3fe;
+  --primary-hover-color: #009ee1;
+  --black-color: #010101;
+  --black-hover-color: #2b2b2b;
+  --line-color: rgba(1, 1, 1, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: var(--black-color);
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.container-fluid {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.grid-item {
+  position: relative;
+  padding: 30px 0 30px 30px;
+}
+
+/* Homepages */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 9999999;
+}
+
+.navbar .container-fluid {
+  padding: 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.navbar .navbar-brand {
+  font-size: 18px;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.navbar .navbar-nav .nav-item {
+  margin-right: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all 0.2s ease;
+}
+
+.navbar .navbar-nav .nav-item:last-child {
+  margin-right: unset;
+}
+
+.navbar .navbar-nav .nav-item:hover {
+  color: var(--primary-color);
+}
+
+.navbar-footer {
+  width: 100%;
+  /* margin: auto; */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar-footer .navbar-nav {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-footer .nav-item {
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.navbar-footer .nav-item:hover {
+  color: var(--primary-color);
+}
+
+.main {
+  height: calc(100vh - 80px);
+}
+.main .container-fluid {
+  height: 100%;
+}
+
+.main-banner-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-banner-item {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-banner-tag {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-banner-tag h1 {
+  font-size: 60px;
+  line-height: 70px;
+}
+.main-banner-tag p {
+  width: 80%;
+  margin: 30px 0 50px 0;
+  font-size: 16px;
+}
+.main-banner-tag a {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.main-banner-image {
+  width: 560px;
+  height: 560px;
+  margin: auto;
+  background-image: url('https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 28% 0 28% 28%;
+  position: absolute;
+  right: 0;
+}
+
+footer {
+  height: 200px;
+  padding: 40px 0;
+  background-color: var(--black-color);
+  color: #fff;
+  position: relative;
+}
+
+.footer-grid {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.footer-item-brand p {
+  width: 60%;
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 300;
+}
+.footer-item-brand .footer-copyright {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%, 50%);
+  opacity: 0.5;
+  font-weight: 300;
+}
+/* Homepages */
+
+/* SignIn */
+.banner {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  border-radius: 40px;
+  display: flex;
+  align-items: start;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+}
+.banner h1,
+.banner p {
+  color: #fff;
+}
+.banner h1 {
+  margin-bottom: 20px;
+  font-size: 50px;
+  line-height: 50px;
+}
+.banner p {
+  width: 70%;
+  font-weight: 300;
+}
+.banner .shape1 {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 0 0 0 40px;
+  transform: rotate(90deg);
+}
+.banner .shape1::before {
+  content: '';
+  position: absolute;
+  bottom: -45px;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  transform: rotate(180deg);
+  clip-path: path('M 0 0 C 10 200, 620 -415, 0 1000');
+}
+.banner .shape1::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -60px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  transform: rotate(180deg);
+  clip-path: path('M 0 0 C 10 200, 620 -415, 0 1000');
+}
+.banner .shape2 {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 0 0 0 40px;
+  transform: rotate(-90deg);
+}
+.banner .shape2::before {
+  content: '';
+  position: absolute;
+  bottom: -45px;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  transform: rotate(180deg);
+  clip-path: path('M 0 0 C 10 200, 620 -415, 0 1000');
+}
+.banner .shape2::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -60px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  transform: rotate(180deg);
+  clip-path: path('M 0 0 C 10 200, 620 -415, 0 1000');
+}
+
+.banner.banner-signin {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url('https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.banner.banner-signup {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url('https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  padding: 100px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.content.signup-content {
+  padding: 20px 100px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content-title {
+  margin-bottom: 40px;
+}
+.content-title h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.content-title p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.content-form,
+.content-form form {
+  width: 100%;
+}
+.content-form .btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 12px;
+}
+.signup-content .content-form .input,
+.content-form .input:first-child {
+  margin-bottom: 24px;
+}
+
+.signup-content .content-form .input:nth-child(4) {
+  margin-bottom: unset !important;
+}
+
+.content-form-action {
+  width: 100%;
+  margin: 14px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.content-form-action a {
+  transition: all 0.2s ease;
+}
+.content-form-action a:hover {
+  color: var(--primary-color);
+}
+
+.content-optional {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+}
+.content-optional-text {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.content-optional-text p {
+  margin: 0 16px;
+  font-size: 14px;
+}
+.content-optional-text hr {
+  width: 100%;
+  opacity: 0.3;
+  color: var(--black-color);
+}
+.content-optional a {
+  color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+.content-optional a:hover {
+  color: var(--primary-hover-color);
+}
+
+.content-optional .wrapper {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-optional .wrapper .btn-image {
+  margin: 0;
+}
+.content-optional .wrapper .btn-image:nth-child(2) {
+  margin: 0 20px;
+}
+/* End SignIn */
+
+/* SignUp */
+.user-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+/* End SignUp */
+
+/* _Shared */
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn.btn-image {
+  padding: 10px;
+  background-color: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-color);
+}
+
+.btn.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn.btn-primary:hover {
+  background-color: var(--primary-hover-color);
+}
+.btn.btn-black {
+  background-color: var(--black-color);
+}
+.btn.btn-black:hover {
+  background-color: var(--black-hover-color);
+}
+
+.image {
+  width: 22px;
+  height: 22px;
+  background-color: unset;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.image-google {
+  background-image: url('https://freelogopng.com/images/all_img/1657952440google-logo-png-transparent.png');
+}
+.image-apple {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/0/747.png');
+}
+.image-facebook {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png');
+}
+
+.input {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.input label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.input input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.input input:hover {
+  border-color: var(--primary-color);
+}
+.input input:focus-visible {
+  outline: unset;
+  border-color: var(--primary-color);
+}
+.input input::placeholder {
+  color: var(--black-color);
+  opacity: 0.2;
+}
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.input-checkbox label {
+  margin-left: 6px;
+}
+/* End _Shared */
